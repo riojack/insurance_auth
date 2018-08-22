@@ -4,7 +4,6 @@ defmodule InsuranceAuthWeb do
       use Phoenix.Controller, namespace: InsuranceAuthWeb
       import Plug.Conn
       import InsuranceAuthWeb.Router.Helpers
-      import InsuranceAuthWeb.Gettext
     end
   end
 
