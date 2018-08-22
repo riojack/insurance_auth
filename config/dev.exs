@@ -6,11 +6,14 @@ use Mix.Config
 # The watchers configuration can be used to run external
 # watchers to your application. For example, we use it
 # with brunch.io to recompile .js and .css sources.
-config :insurance_auth, InsuranceAuthWeb.Endpoint,
-  http: [port: 4000],
-  debug_errors: true,
-  code_reloader: true,
-  check_origin: false
+config :insurance_auth,
+       InsuranceAuthWeb.Endpoint,
+       http: [
+         port: 8513
+       ],
+       debug_errors: true,
+       code_reloader: true,
+       check_origin: false
 
 # ## SSL Support
 #
@@ -29,14 +32,15 @@ config :insurance_auth, InsuranceAuthWeb.Endpoint,
 # different ports.
 
 # Watch static and templates for browser reloading.
-config :insurance_auth, InsuranceAuthWeb.Endpoint,
-  live_reload: [
-    patterns: [
-      ~r{priv/gettext/.*(po)$},
-      ~r{lib/insurance_auth_web/views/.*(ex)$},
-      ~r{lib/insurance_auth_web/templates/.*(eex)$}
-    ]
-  ]
+config :insurance_auth,
+       InsuranceAuthWeb.Endpoint,
+       live_reload: [
+         patterns: [
+           ~r{priv/gettext/.*(po)$},
+           ~r{lib/insurance_auth_web/views/.*(ex)$},
+           ~r{lib/insurance_auth_web/templates/.*(eex)$}
+         ]
+       ]
 
 # Do not include metadata nor timestamps in development logs
 config :logger, :console, format: "[$level] $message\n"

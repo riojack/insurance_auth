@@ -6,16 +6,22 @@
 use Mix.Config
 
 # Configures the endpoint
-config :insurance_auth, InsuranceAuthWeb.Endpoint,
-  url: [host: "localhost"],
-  secret_key_base: "eB3bGFGfxsmiNTv5llbQAHaSg9K8IIXZIHWwkKmGPiW7xhySO0kG8Ts4oiJRf9EV",
-  pubsub: [name: InsuranceAuth.PubSub,
-           adapter: Phoenix.PubSub.PG2]
+config :insurance_auth,
+       InsuranceAuthWeb.Endpoint,
+       url: [
+         host: "localhost"
+       ],
+       secret_key_base: "eB3bGFGfxsmiNTv5llbQAHaSg9K8IIXZIHWwkKmGPiW7xhySO0kG8Ts4oiJRf9EV",
+       pubsub: [
+         name: InsuranceAuth.PubSub,
+         adapter: Phoenix.PubSub.PG2
+       ]
 
 # Configures Elixir's Logger
-config :logger, :console,
-  format: "$time $metadata[$level] $message\n",
-  metadata: [:user_id]
+config :logger,
+       :console,
+       format: "$time $metadata[$level] $message\n",
+       metadata: [:user_id]
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
